@@ -20,6 +20,14 @@
       <ion-list>
         <MessageListItem v-for="message in messages" :key="message.id" :message="message" />
       </ion-list>
+      <ion-footer>
+        <ion-toolbar>
+          <ion-title size="large">Aplikasi Pembaca Inbox</ion-title>
+          <ion-router-link href="/about">
+            Tentang Aplikasi Ini
+          </ion-router-link>
+        </ion-toolbar>
+      </ion-footer>
     </ion-content>
   </ion-page>
 </template>
@@ -46,4 +54,5 @@ const refresh = (ev: CustomEvent) => {
     ev.detail.complete();
   }, 3000);
 };
+
 </script>
